@@ -1,0 +1,7 @@
+Flask
+flask_sqlalchemy
+sqlalchemy_utils
+WTForms-Alchemy
+flask_wtf
+celery[redis]
+redis

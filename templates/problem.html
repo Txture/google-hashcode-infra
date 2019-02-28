@@ -1,0 +1,12 @@
+<html>
+<body>
+<form method="POST" action="/problem">
+    {{ form.csrf_token }}
+    {{ form.name }}<br/>
+    {{ form.input }}<br/>
+
+
+    <input type="submit" value="Go">
+</form>
+</body>
+</html>

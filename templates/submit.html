@@ -1,0 +1,31 @@
+<html>
+<body>
+<form method="POST" action="/submit">
+    {{ form.csrf_token }}
+    {{ form.problem }}<br/>
+
+    {{ form.param1_start.label }} {{ form.param1_start }}
+    {{ form.param1_step.label }} {{ form.param1_step }}
+    {{ form.param1_end.label }} {{ form.param1_end }}
+    <br/>
+    {{ form.param2_start.label }} {{ form.param2_start }}
+    {{ form.param2_step.label }} {{ form.param2_step }}
+    {{ form.param2_end.label }} {{ form.param2_end }}
+    <br/>
+    {{ form.param3_start.label }} {{ form.param3_start }}
+    {{ form.param3_step.label }} {{ form.param3_step }}
+    {{ form.param3_end.label }} {{ form.param3_end }}
+    <br/>
+    {{ form.param4_start.label }} {{ form.param4_start }}
+    {{ form.param4_step.label }} {{ form.param4_step }}
+    {{ form.param4_end.label }} {{ form.param4_end }}
+    <br/>
+    {{ form.param5_start.label }} {{ form.param5_start }}
+    {{ form.param5_step.label }} {{ form.param5_step }}
+    {{ form.param5_end.label }} {{ form.param5_end }}
+    <br/>
+
+    <input type="submit" value="Go">
+</form>
+</body>
+</html>

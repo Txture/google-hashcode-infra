@@ -1,0 +1,32 @@
+<!doctype html>
+<title>My Application</title>
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class=flashes>
+    {% for message in messages %}
+      <li>{{ message }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+<body>
+<a href="problem">Change Problem</a><br>
+<a href="submit">Start Computation</a><br>
+<br/>
+<table>
+    <th>Score</th>
+    <th>Problem</th>
+    <th>Parameters</th>
+    <th>Solution</th>
+    {% for result in results %}
+    <tr>
+        <td>{{ result.score }}</td>
+        <td>{{ result.problem_id }}</td>
+        <td>{{ result.parameter_set }}</td>
+        <td><a href="solution/{{ result.id }}">Download</a></td>
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>
