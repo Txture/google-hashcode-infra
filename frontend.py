@@ -168,7 +168,7 @@ def submit():
             comb_it2 = comb_iterator(form.param2_start.data, form.param2_end.data, form.param2_step.data)
             if comb_it2 is None:
                 # only start for param1
-                process = subprocess.Popen(['python3', '/home/ubuntu/code/main.py', '--problem-id', problem.name, '--input', problem.inputfile, '--param1', param1])
+                process = subprocess.Popen(['python3', '/home/josi/hashcode/main.py', '--problem-id', problem.name, '--input', problem.inputfile, '--param1', param1])
                 print('only one param')
             else:
                 for param2 in comb_it2:
@@ -176,7 +176,7 @@ def submit():
                     comb_it3 = comb_iterator(form.param3_start.data, form.param3_end.data, form.param3_step.data)
                     if comb_it3 is None:
                         # only start for param1 and param 2
-                        process = subprocess.Popen(['python3', '/home/ubuntu/code/main.py', '--problem-id', problem.name, '--input', problem.inputfile, '--param1', param1, '--param2', param2])
+                        process = subprocess.Popen(['python3', '/home/josi/hashcode/main.py', '--problem-id', problem.name, '--input', problem.inputfile, '--param1', param1, '--param2', param2])
                         print('two params')
                     else:
                         for param3 in comb_it3:
@@ -185,7 +185,7 @@ def submit():
                             if comb_it4 is None:
                                 # only start for param1 and param 2
                                 process = subprocess.Popen(
-                                    ['python3', '/home/ubuntu/code/main.py', '--problem-id', problem.name, '--input', problem.inputfile, '--param1', param1, '--param2', param2, '--param3', param3])
+                                    ['python3', '/home/josi/hashcode/main.py', '--problem-id', problem.name, '--input', problem.inputfile, '--param1', param1, '--param2', param2, '--param3', param3])
                                 print('three params')
                             else:
                                 for param4 in comb_it4:
@@ -194,12 +194,12 @@ def submit():
                                     if comb_it5 is None:
                                         # only start for param1 and param 2
                                         process = subprocess.Popen(
-                                            ['python3', '/home/ubuntu/code/main.py', '--problem-id', problem.name, '--input', problem.inputfile, '--param1', param1, '--param2', param2,
+                                            ['python3', '/home/josi/hashcode/main.py', '--problem-id', problem.name, '--input', problem.inputfile, '--param1', param1, '--param2', param2,
                                              '--param3', param3, '--param4', param4])
                                     else:
                                         for param5 in comb_it5:
                                             process = subprocess.Popen(
-                                                ['python3', '/home/ubuntu/code/main.py', '--problem-id', problem.name, '--input', problem.inputfile, '--param1', param1, '--param2', param2,
+                                                ['python3', '/home/josi/hashcode/main.py', '--problem-id', problem.name, '--input', problem.inputfile, '--param1', param1, '--param2', param2,
                                                  '--param3', param3, '--param4', param4, '--param5', param5])
 
         return redirect('/')
